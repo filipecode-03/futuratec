@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Skills de agente instaladas no repositório, não fazem parte do site.
+    ".agents/**",
+    ".impeccable/**",
   ]),
 ]);
 
