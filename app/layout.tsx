@@ -3,6 +3,10 @@ import { Archivo, Geist_Mono, Hanken_Grotesk } from "next/font/google";
 import { MotionProvider } from "@/components/site/motion-provider";
 import { BRAND, SEO, SITE_URL } from "@/content/site";
 import "./globals.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+config.autoAddCss = false;
 
 const archivo = Archivo({
   variable: "--font-archivo",

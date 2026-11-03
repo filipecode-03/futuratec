@@ -2,6 +2,8 @@ import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
 import { BRANCHES, CONTACT, branchMapsUrl } from "@/content/site";
 import { QuoteLink } from "./quote-link";
 import { Reveal } from "./reveal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const channelClass =
   "group flex min-h-14 items-center justify-between gap-4 border-b border-white/25 py-3 text-lg font-medium text-white transition-colors hover:border-white";
@@ -44,7 +46,9 @@ export function Contact() {
                 className={channelClass}
               >
                 <span className="flex items-center gap-3">
-                  <MessageCircle aria-hidden="true" className="size-5 shrink-0" />
+                  <span aria-hidden="true" className="flex size-5 shrink-0 items-center justify-center">
+                    <FontAwesomeIcon icon={faWhatsapp} className="size-5" />
+                  </span>
                   <span>
                     <span className="sr-only">WhatsApp: </span>
                     {CONTACT.whatsappDisplay}
@@ -74,8 +78,8 @@ export function Contact() {
                 className={channelClass}
               >
                 <span className="flex items-center gap-3">
-                  <span aria-hidden="true" className="grid size-5 shrink-0 place-items-center font-display text-base leading-none font-bold">
-                    @
+                  <span aria-hidden="true" className="flex size-5 shrink-0 items-center justify-center">
+                    <FontAwesomeIcon icon={faInstagram} className="size-5" />
                   </span>
                   <span>
                     <span className="sr-only">Instagram: </span>

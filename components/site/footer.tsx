@@ -1,12 +1,28 @@
+"use client";
+
 import { BRAND, BRANCHES, CONTACT, NAV_ITEMS } from "@/content/site";
-import { Wordmark } from "./wordmark";
+import Image from "next/image";
+import logoFull from "@/public/brand/wordmark.png"
+import nortea from "@/public/brand/nortea.png"
+import { useEffect, useState } from "react";
+
+export function CopyrightYear() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
+  return <span>{year ?? "2026"}</span>;
+}
+
 
 export function Footer() {
   return (
     <footer className="border-t border-line bg-ink py-14">
       <div className="wrap grid gap-10 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-5">
-          <Wordmark />
+          <Image src={logoFull} alt="logoFull" className="w-40" />
           <p className="mt-4 max-w-[36ch] text-sm leading-relaxed text-fg-3">
             {BRAND.tagline} em {BRANCHES.map((b) => `${b.city} (${b.state})`).join(" e ")}.
           </p>
@@ -55,9 +71,29 @@ export function Footer() {
           </li>
         </ul>
       </div>
-      <div className="wrap mt-10 border-t border-line pt-6 text-xs text-fg-3">
-        {BRAND.name}. Todos os direitos reservados.
-      </div>
+      
+<div className="mt-10 border-t border-line">
+  <div className="wrap flex flex-col items-center justify-center gap-5 pt-6 sm:flex-row sm:justify-between sm:gap-6">
+    <p className="text-center text-xs leading-relaxed text-fg-3 sm:text-left">
+      © {new Date().getFullYear()} {BRAND.name}. Todos os direitos reservados.
+    </p>
+
+    <a
+      href="https://norteadigital.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visitar o site da Nortea Digital"
+      className="inline-flex shrink-0 items-center transition-opacity duration-200 hover:opacity-75"
+    >
+      <Image
+        src={nortea}
+        alt="Nortea Digital"
+        className="h-auto w-36 object-contain sm:w-40 md:w-44"
+      />
+    </a>
+  </div>
+</div>
+
     </footer>
   );
 }

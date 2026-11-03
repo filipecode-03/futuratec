@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import mark from "@/public/brand/mark.png"
 import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -72,7 +74,7 @@ export function Header() {
           aria-label="Futura Tec, ir para o início"
           className="rounded-sm py-2"
         >
-          <Wordmark />
+          <Image src={mark} alt="logo" className="size-10 shrink-0" />
         </a>
 
         <nav aria-label="Principal" className="hidden lg:block">
@@ -134,7 +136,7 @@ export function Header() {
               </SheetDescription>
               <div className="flex h-full flex-col px-6 pt-5 pb-8">
                 <div className="flex h-11 items-center">
-                  <Wordmark />
+                  <Image src={mark} alt="logo" className="size-10 shrink-0" />
                 </div>
                 <nav aria-label="Menu móvel" className="mt-10">
                   <ul>
