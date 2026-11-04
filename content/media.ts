@@ -36,7 +36,7 @@ export const MEDIA = media({
       "Vídeo vertical curto (30 a 60 s) de projetos reais: sala de cinema, automação em uso, rack e instalação. Sem áudio obrigatório, em loop.",
     alt: "Apresentação em vídeo de projetos da Futura Tec em residências e ambientes comerciais.",
     src: "/media/apresentacao-futura-tec.mp4",
-    poster: "/media/apresentacao-futura-tec-poster.png",
+    poster: "/media/apresentacao-futura-tec-poster.jpg",
   },
   solutionAutomation: {
     slug: "IMG-SOLUCAO-AUTOMACAO",
