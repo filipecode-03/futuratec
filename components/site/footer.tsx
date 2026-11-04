@@ -71,29 +71,27 @@ export function Footer() {
           </li>
         </ul>
       </div>
-      
-<div className="mt-10 border-t border-line">
-  <div className="wrap flex flex-col items-center justify-center gap-5 pt-6 sm:flex-row sm:justify-between sm:gap-6">
-    <p className="text-center text-xs leading-relaxed text-fg-3 sm:text-left">
-      © {new Date().getFullYear()} {BRAND.name}. Todos os direitos reservados.
-    </p>
+      <div className="mt-10 border-t border-line">
+        <div className="wrap flex flex-col items-center justify-center gap-5 pt-6 sm:flex-row sm:justify-between sm:gap-6">
+          <p className="text-center text-xs leading-relaxed text-fg-3 sm:text-left">
+            © {new Date().getFullYear()} {BRAND.name}. Todos os direitos reservados.
+          </p>
 
-    <a
-      href="https://norteadigital.vercel.app"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Visitar o site da Nortea Digital"
-      className="inline-flex shrink-0 items-center transition-opacity duration-200 hover:opacity-75"
-    >
-      <Image
-        src={nortea}
-        alt="Nortea Digital"
-        className="h-auto w-36 object-contain sm:w-40 md:w-44"
-      />
-    </a>
-  </div>
-</div>
-
+          <a
+            href="https://norteadigital.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar o site da Nortea Digital"
+            className="inline-flex shrink-0 items-center transition-opacity duration-200 hover:opacity-75"
+          >
+            <Image
+              src={nortea}
+              alt="Nortea Digital"
+              className="h-auto w-36 object-contain sm:w-40 md:w-44"
+            />
+          </a>
+        </div>
+      </div>
     </footer>
   );
 }
