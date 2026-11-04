@@ -7,13 +7,13 @@ import nortea from "@/public/brand/nortea.png"
 import { useEffect, useState } from "react";
 
 export function CopyrightYear() {
-  const [year, setYear] = useState<number | null>(null);
+  const [year, setYear] = useState(2026);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
 
-  return <span>{year ?? "2026"}</span>;
+  return <span>{year}</span>;
 }
 
 
@@ -74,7 +74,7 @@ export function Footer() {
       <div className="mt-10 border-t border-line">
         <div className="wrap flex flex-col items-center justify-center gap-5 pt-6 sm:flex-row sm:justify-between sm:gap-6">
           <p className="text-center text-xs leading-relaxed text-fg-3 sm:text-left">
-            © {new Date().getFullYear()} {BRAND.name}. Todos os direitos reservados.
+            © <CopyrightYear /> {BRAND.name}. Todos os direitos reservados.
           </p>
 
           <a
