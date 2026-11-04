@@ -16,7 +16,6 @@ import {
 import { CONTACT, CTA_LABEL, NAV_ITEMS } from "@/content/site";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
-import { Wordmark } from "./wordmark";
 
 const SECTION_IDS = NAV_ITEMS.map((item) => item.href.slice(1));
 

@@ -28,7 +28,11 @@ export function Projects() {
                 </p>
               </Reveal>
               <Reveal delay={0.15} className="mt-10">
-                <MediaSlot id="brandReel" sizes="(min-width: 1024px) 45vw, 100vw" />
+                <MediaSlot
+                  id="brandReel"
+                  sizes="(min-width: 1024px) 22rem, 80vw"
+                  className="mx-auto max-w-88 lg:mx-0"
+                />
               </Reveal>
             </div>
           </div>

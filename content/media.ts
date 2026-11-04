@@ -31,10 +31,12 @@ export const MEDIA = media({
   brandReel: {
     slug: "VIDEO-APRESENTACAO-FUTURA-TEC",
     kind: "video",
-    ratio: "16/9",
+    ratio: "9/16",
     brief:
-      "Vídeo curto (30 a 60 s) de projetos reais: sala de cinema, automação em uso, rack e instalação. Sem áudio obrigatório, em loop.",
+      "Vídeo vertical curto (30 a 60 s) de projetos reais: sala de cinema, automação em uso, rack e instalação. Sem áudio obrigatório, em loop.",
     alt: "Apresentação em vídeo de projetos da Futura Tec em residências e ambientes comerciais.",
+    src: "/media/apresentacao-futura-tec.mp4",
+    poster: "/media/video-apresentacao-futura-tec-poster.png",
   },
   solutionAutomation: {
     slug: "IMG-SOLUCAO-AUTOMACAO",
