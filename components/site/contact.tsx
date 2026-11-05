@@ -1,4 +1,4 @@
-import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { BRANCHES, CONTACT, branchMapsUrl } from "@/content/site";
 import { QuoteLink } from "./quote-link";
 import { Reveal } from "./reveal";

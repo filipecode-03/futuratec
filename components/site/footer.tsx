@@ -1,21 +1,16 @@
-"use client";
-
 import { BRAND, BRANCHES, CONTACT, NAV_ITEMS } from "@/content/site";
 import Image from "next/image";
+import { cacheLife } from "next/cache";
 import logoFull from "@/public/brand/wordmark.png"
 import nortea from "@/public/brand/nortea.png"
-import { useEffect, useState } from "react";
 
-export function CopyrightYear() {
-  const [year, setYear] = useState(2026);
-
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
-
-  return <span>{year}</span>;
+// Server Component em cache: a hora atual é resolvida no servidor (sem erro de
+// "blocking prerender") e revalidada periodicamente, então o ano se atualiza sozinho.
+export async function CopyrightYear() {
+  "use cache";
+  cacheLife("days");
+  return <span>{new Date().getFullYear()}</span>;
 }
-
 
 export function Footer() {
   return (
