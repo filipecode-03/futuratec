@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Geist_Mono, Hanken_Grotesk } from "next/font/google";
+import { Analytics } from "@/components/site/analytics";
 import { MotionProvider } from "@/components/site/motion-provider";
 import { BRAND, SEO, SITE_URL } from "@/content/site";
 import "./globals.css";
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Pular para o conteúdo
         </a>
         <MotionProvider>{children}</MotionProvider>
+        <Analytics />
       </body>
     </html>
   );
